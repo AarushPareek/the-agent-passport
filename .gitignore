@@ -1,0 +1,12 @@
+node_modules/
+dist/
+oclif.manifest.json
+*.tsbuildinfo
+.sf/
+.sfdx/
+.env
+.env.*
+.agentia/config.user.json
+.agentia/idex
+.agentia/apex.tests.*.json
+spikes/**/out/

@@ -1,0 +1,83 @@
+{
+  "name": "agentia-plugin-passport",
+  "description": "Agent Passport: an Agentia CLI plugin that checks an Agentforce agent is safe to promote between environments",
+  "version": "0.1.0",
+  "author": "Aarush Pareek",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": "./dist/index.js",
+  "license": "UNLICENSED",
+  "private": true,
+  "repository": "github:AarushPareek/the-agent-passport",
+  "keywords": [
+    "oclif-plugin",
+    "agentia",
+    "agentforce",
+    "copado"
+  ],
+  "files": [
+    "/dist",
+    "/oclif.manifest.json",
+    "/skills"
+  ],
+  "dependencies": {
+    "@copado/agentia-plugin-sdk": "0.1.2"
+  },
+  "peerDependencies": {
+    "@oclif/core": "^4"
+  },
+  "devDependencies": {
+    "@oclif/core": "^4",
+    "@types/node": "^22",
+    "oclif": "^4",
+    "shx": "^0.3.3",
+    "typescript": "^5"
+  },
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "agentia": {
+    "hostApi": 1,
+    "requires": [
+      "auth.status",
+      "format.table",
+      "pipeline.get",
+      "pipeline.list",
+      "project.current",
+      "work.getWorkItem",
+      "workspace.current"
+    ],
+    "permissions": {
+      "network": [
+        "git remote \"origin\" (only with travel --fetch)"
+      ],
+      "files": "read-write",
+      "commands": [
+        "git"
+      ],
+      "env": []
+    }
+  },
+  "oclif": {
+    "bin": "agentia",
+    "dirname": "agentia-cli",
+    "commands": "./dist/commands",
+    "topics": {
+      "passport": {
+        "description": "Agent Passport: dependency, travel and behaviour checks for Agentforce agents"
+      }
+    }
+  },
+  "scripts": {
+    "build": "shx rm -rf dist && tsc -b",
+    "prepare": "npm run build",
+    "typecheck": "tsc -p tsconfig.test.json --noEmit",
+    "test": "node --test \"test/unit/**/*.test.ts\"",
+    "test:integration": "node --test \"test/integration/**/*.test.ts\"",
+    "test:all": "npm run typecheck && npm run build && npm test && npm run test:integration",
+    "clean": "shx rm -f oclif.manifest.json",
+    "prepack": "npm run build && oclif manifest",
+    "postpack": "npm run clean"
+  }
+}

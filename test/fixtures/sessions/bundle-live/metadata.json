@@ -1,0 +1,10 @@
+{
+  "sessionId": "01a1650a-b09a-745c-84d3-24358a1e1093",
+  "agentId": "CustomerServiceAgent",
+  "startTime": "2026-10-22T19:16:02.464Z",
+  "planIds": [
+    "061697f7-206b-4593-9e20-3a0b3db3ba25",
+    "5807e530-e2df-4f84-81c5-c7100959950c"
+  ],
+  "mockMode": "Live Test"
+}

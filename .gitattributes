@@ -1,0 +1,5 @@
+# Same line endings on every machine: tests compare some files byte for byte, and bash needs LF.
+* text=auto eol=lf
+# Windows batch files (Agentia's .agentia_quality_gates.cmd and its test fixtures) keep CRLF.
+*.cmd text eol=crlf
+*.png binary

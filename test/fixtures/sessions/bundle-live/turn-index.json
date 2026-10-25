@@ -1,0 +1,58 @@
+{
+  "version": "1.0",
+  "sessionId": "01a1650a-b09a-745c-84d3-24358a1e1093",
+  "agentId": "CustomerServiceAgent",
+  "created": "2026-10-22T19:16:02.464Z",
+  "turns": [
+    {
+      "turn": 1,
+      "timestamp": "2026-10-22T19:16:02.464Z",
+      "role": "agent",
+      "summary": "",
+      "summaryTruncated": false,
+      "multiModal": null,
+      "traceFile": null,
+      "planId": null
+    },
+    {
+      "turn": 2,
+      "timestamp": "2026-10-22T19:16:31.320Z",
+      "role": "user",
+      "summary": "I was charged twice for my last order and I want a refund",
+      "summaryTruncated": false,
+      "multiModal": null,
+      "traceFile": null,
+      "planId": null
+    },
+    {
+      "turn": 3,
+      "timestamp": "2026-10-22T19:16:38.400Z",
+      "role": "agent",
+      "summary": "I have escalated your case to a specialist who will review the double charge and help process your r...",
+      "summaryTruncated": true,
+      "multiModal": null,
+      "traceFile": "traces/061697f7-206b-4593-9e20-3a0b3db3ba25.json",
+      "planId": "061697f7-206b-4593-9e20-3a0b3db3ba25"
+    },
+    {
+      "turn": 4,
+      "timestamp": "2026-10-22T19:16:52.653Z",
+      "role": "user",
+      "summary": "Please create a case for this",
+      "summaryTruncated": false,
+      "multiModal": null,
+      "traceFile": null,
+      "planId": null
+    },
+    {
+      "turn": 5,
+      "timestamp": "2026-10-22T19:16:58.060Z",
+      "role": "agent",
+      "summary": "A case is being created for your double charge and refund request, and it has already been escalated...",
+      "summaryTruncated": true,
+      "multiModal": null,
+      "traceFile": "traces/5807e530-e2df-4f84-81c5-c7100959950c.json",
+      "planId": "5807e530-e2df-4f84-81c5-c7100959950c"
+    }
+  ]
+}

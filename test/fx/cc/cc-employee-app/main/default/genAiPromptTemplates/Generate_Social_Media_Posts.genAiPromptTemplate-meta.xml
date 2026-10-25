@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<GenAiPromptTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <activeVersionIdentifier
+    >g8e6IWywKki8fcmzblc3o3liVRxBT/o0dl5GpICFNJE=_1</activeVersionIdentifier>
+    <description
+    >This template is used to generate social media posts that promote an experience
+        session for Twitter, LinkedIn and Slack</description>
+    <developerName>Generate_Social_Media_Posts</developerName>
+    <masterLabel>Generate Social Media Posts</masterLabel>
+    <templateVersions>
+        <content
+        > You&apos;re the community manager for Coral Cloud Resorts hotel, which offers
+            booking fun and lovely experiences.
+             Create social media posts for Twitter, LinkedIn &amp; Slack describing the experience.
+             Formatting rules you must follow:
+             &quot;&quot;&quot;
+             &gt; Use clear, concise, and straightforward language using the active voice and
+            strictly avoiding the use of filler words and phrases and redundant language.
+             &gt; Make sure the response is valid JSON.
+             &gt; The Twitter post should include emojis, and have less than 280 characters
+             &gt; The LinkedIn post should include emojis, bullets, and have between 1500 and 2000
+            characters
+             &gt; Both the Twitter and the LinkedIn posts can have Unicode formatting. Use symbols
+            from Unicode’s Mathematical Alphanumeric Symbols block liberally to produce facsimiles
+            of bold, italics, line separation, and other formatting. Examples for a sample sentence:
+             italics sans: 𝘛𝘩𝘦 𝘘𝘶𝘪𝘤𝘬 𝘉𝘳𝘰𝘸𝘯 𝘍𝘰𝘹 𝘑𝘶𝘮𝘱𝘦𝘥 𝘖𝘷𝘦𝘳 𝘵𝘩𝘦 𝘭𝘢𝘻𝘺
+            𝘥𝘰𝘨.
+             bold sans: 𝗧𝗵𝗲 𝗤𝘂𝗶𝗰𝗸 𝗕𝗿𝗼𝘄𝗻 𝗙𝗼𝘅 𝗝𝘂𝗺𝗽𝗲𝗱 𝗢𝘃𝗲𝗿 𝘁𝗵𝗲 𝗹𝗮𝘇𝘆
+            𝗱𝗼𝗴.
+             bold italic sans: 𝙏𝙝𝙚 𝙌𝙪𝙞𝙘𝙠 𝘽𝙧𝙤𝙬𝙣 𝙁𝙤𝙭 𝙅𝙪𝙢𝙥𝙚𝙙 𝙊𝙫𝙚𝙧 𝙩𝙝𝙚
+            𝙡𝙖𝙯𝙮 𝙙𝙤𝙜.
+             italics serif: 𝑇ℎ𝑒 𝑄𝑢𝑖𝑐𝑘 𝐵𝑟𝑜𝑤𝑛 𝐹𝑜𝑥 𝐽𝑢𝑚𝑝𝑒𝑑 𝑂𝑣𝑒𝑟 𝑡ℎ𝑒 𝑙𝑎𝑧𝑦
+            𝑑𝑜𝑔.
+
+             &gt; The block kit code should be valid block kit code for Slack. Example of block kit
+            code:
+
+             {
+              &quot;blocks&quot;: [
+                {
+                  &quot;type&quot;: &quot;section&quot;,
+                  &quot;text&quot;: {
+                    &quot;type&quot;: &quot;mrkdwn&quot;,
+                    &quot;text&quot;: &quot;🌴 *Tropical Snorkel Adventure* 🐠&quot;
+                  }
+                },
+                {
+                  &quot;type&quot;: &quot;section&quot;,
+                  &quot;text&quot;: {
+                    &quot;type&quot;: &quot;mrkdwn&quot;,
+                    &quot;text&quot;: &quot;Swim alongside colorful marine life in our coral-rich
+            tropical waters on this guided snorkeling tour.\n\n *Experience characteristics:*&quot;
+                  },
+                  &quot;accessory&quot;: {
+                    &quot;type&quot;: &quot;image&quot;,
+                    &quot;image_url&quot;:
+            &quot;{!$Input:experienceSession.Experience__r.Picture_URL__c}&quot;,
+                    &quot;alt_text&quot;: &quot;alt text for image&quot;
+                  }
+                },
+                {
+                  &quot;type&quot;: &quot;divider&quot;
+                },
+                {
+                  &quot;type&quot;: &quot;section&quot;,
+                  &quot;text&quot;: {
+                    &quot;type&quot;: &quot;mrkdwn&quot;,
+                    &quot;text&quot;: &quot;• Swim alongside colorful marine life in our coral-rich
+            tropical waters on this guided snorkeling tour.&quot;
+                  }
+                },
+                {
+                  &quot;type&quot;: &quot;section&quot;,
+                  &quot;text&quot;: {
+                    &quot;type&quot;: &quot;mrkdwn&quot;,
+                    &quot;text&quot;: &quot;• Date: 3/11/2024, starting at 16:00, and finishing at
+            20:00.&quot;
+                  }
+                },
+                {
+                  &quot;type&quot;: &quot;section&quot;,
+                  &quot;text&quot;: {
+                    &quot;type&quot;: &quot;mrkdwn&quot;,
+                    &quot;text&quot;: &quot;• Price: $50. Spots are limited, secure your spot today!
+            🏖️&quot;
+                  }
+                },
+                {
+                  &quot;type&quot;: &quot;divider&quot;
+                },
+                {
+                  &quot;type&quot;: &quot;divider&quot;
+                },
+                {
+                  &quot;type&quot;: &quot;actions&quot;,
+                  &quot;elements&quot;: [
+                    {
+                      &quot;type&quot;: &quot;button&quot;,
+                      &quot;text&quot;: {
+                        &quot;type&quot;: &quot;plain_text&quot;,
+                        &quot;text&quot;: &quot;Book Experience&quot;,
+                        &quot;emoji&quot;: true
+                      },
+                      &quot;value&quot;: &quot;click_me_123&quot;,
+                      &quot;url&quot;:
+            &quot;https://coralcloud.com/book/{!$Input:experienceSession.Id}&quot;
+                    }
+                  ]
+                }
+              ]
+             }
+             &quot;&quot;&quot;
+
+             Instructions regarding the content to generate:
+             &quot;&quot;&quot;
+             For each post:
+             - Add a title including the name of the experience,
+            {!$Input:experienceSession.Experience__r.Name}
+             - Add a section including the experience characteristics, such as:
+             + Description: {!$Input:experienceSession.Experience__r.Description__c}
+             + Date and time: {!$Input:experienceSession.Date__c}, starting at
+            {!$Input:experienceSession.Start_Time__c}, and finishing at
+            {!$Input:experienceSession.End_Time__c}
+             - Also include a link to the picture of the experience:
+            {!$Input:experienceSession.Experience__r.Picture_URL__c}, or the picture directly in the
+            case of the slack post.
+             - Finally mention the price {!$Input:experienceSession.Experience__r.Price__c} and say
+            spots are limited.
+
+             The final response should have the next format:
+             {
+             &quot;twitter&quot;: [here goes the twitter post],
+             &quot;linkedin&quot;: [here goes the linkedin post],
+             &quot;blockkit&quot;: [here goes the slack post]
+             }
+             &quot;&quot;&quot;
+
+             Now generate the social media posts.
+</content>
+        <inputs>
+            <apiName>experienceSession</apiName>
+            <definition>SOBJECT://Session__c</definition>
+            <masterLabel>Experience Session</masterLabel>
+            <referenceName>Input:experienceSession</referenceName>
+            <required>true</required>
+        </inputs>
+        <primaryModel>sfdc_ai__DefaultOpenAIGPT4OmniMini</primaryModel>
+        <status>Published</status>
+        <versionIdentifier
+        >g8e6IWywKki8fcmzblc3o3liVRxBT/o0dl5GpICFNJE=_1</versionIdentifier>
+    </templateVersions>
+    <type>einstein_gpt__flex</type>
+    <visibility>Global</visibility>
+</GenAiPromptTemplate>
